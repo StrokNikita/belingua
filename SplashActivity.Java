@@ -17,16 +17,17 @@ public class SplashActivity extends AppCompatActivity {
         Thread timer = new thread() {
             public void run () {
                 try{
-                sleep (2000);
-            } catch (InterruptedException e) {
+                    sleep(2000);
+                } catch (InterruptedException e) {
                     e.printStackTrace();
-            }
-            finally {
+                }
+                finally {
                     Intent myintent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity (myintent);
                 }
             }
         };
-timer.start();
+        timer.start();
     }
 }
+
