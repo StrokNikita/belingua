@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.belingua;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +14,7 @@ public class SplashActivity extends AppCompatActivity {
 
         //Run SplashActivity in a separate Thread, wait for 2 second, and terminate
 
-        Thread timer = new thread() {
+        Thread timer = new Thread() {
             public void run () {
                 try{
                     sleep(2000);
