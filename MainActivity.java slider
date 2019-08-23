@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSlideViewPager = (ViewPager) findViewById(R.id.SlideViewPager);
+        mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
         sliderAdapter = new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addDotsIndicator(int position){
         mDots = new TextView[3];
-        for(int i = 0; i < mDots.length; i++){
+        for(int i = 0; mDots.length > i; i++){
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226"));
             mDots[i].setTextSize(35);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(mDots.length > 0){
-            mDots[position].setTextColor(getResources().getColor(R.color.colorTransparentWhite));
+            mDots[position].setTextColor(getResources().getColor(R.color.colorWhite));
         }
     }
 
